@@ -11,11 +11,9 @@ app.use(cors());
 
 io.on('connection', async (socket) => {
 
+    console.log('Connection ID:', socket.id);
+
     socket.on(`message`, async (message, cb) => {
-
-    });
-
-    socket.on('login', async (data) => {
 
     });
 
@@ -24,5 +22,7 @@ io.on('connection', async (socket) => {
     });
 
 });
+
+module.exports = http;
 
 
