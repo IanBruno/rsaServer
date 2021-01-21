@@ -10,6 +10,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors());
 
+//Este es el archivo principal del servidor, en este se inicializa el socket para recibir conexiones y lanzar eventos del mismo
+//como los que se describe a continuación:
+
 io.on('connection', async (socket) => {
     const s = {
         id: socket.id,
